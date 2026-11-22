@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  --color-forest-950: #07120d;
+  --color-forest-900: #0b1a13;
+  --color-forest-800: #10251c;
+  --color-forest-700: #173527;
+  --color-forest-600: #204735;
+  --color-gold-500: #c89d4c;
+  --color-gold-400: #dfb85c;
+  --color-gold-300: #eed08b;
+  --color-cream-50: #fcfbf8;
+  --color-cream-100: #f6f3eb;
+  --color-cream-200: #ebe5d7;
+  --color-cream-300: #ded4c0;
+}
+
+/* Serif font families */
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-serif-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-serif-royal {
+  font-family: 'Cinzel', serif;
+}
+
+.font-sans-modern {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #091610;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #254b38;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c89d4c;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Luxury Gradients & Glows */
+.bg-haven-hero {
+  background: linear-gradient(180deg, rgba(7, 18, 13, 0.45) 0%, rgba(7, 18, 13, 0.75) 75%, #07120d 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #eed08b 0%, #dfb85c 40%, #c89d4c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(135deg, #dfb85c, rgba(200, 157, 76, 0.3)) 1;
+}
+
+/* Premium Card hover subtle lift */
+.haven-card-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.haven-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -10px rgba(11, 26, 19, 0.12), 0 0 1px 1px rgba(200, 157, 76, 0.25);
+}
+
+/* Input Focus Glow */
+.haven-input-focus:focus {
+  outline: none;
+  border-color: #c89d4c;
+  box-shadow: 0 0 0 3px rgba(200, 157, 76, 0.18);
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Glassmorphism Panels */
+.haven-glass-dark {
+  background: rgba(11, 26, 19, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(223, 184, 92, 0.22);
+}
+
+.haven-glass-light {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(200, 157, 76, 0.2);
+}
